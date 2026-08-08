@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriTech - About Us & Cooperative Mission</title>
+  <meta name="description" content="Learn about our precision agronomists team, cooperative history, and mission.">
+  <meta name="color-scheme" content="light dark">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <!-- FOUC prevention inline script -->
+  <script>
+    {
+      const theme = localStorage.getItem('color-scheme') || 
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      const dir = localStorage.getItem('site-dir') || 'ltr';
+      document.documentElement.setAttribute('dir', dir);
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Background Animated Shapes -->
+  <div class="parallax-bg">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+  </div>
+  <header class="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo" id="logo-link">
+        <svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12c0 2.21.72 4.25 1.94 5.92L12 22l8.06-4.08C21.28 16.25 22 14.21 22 12c0-5.52-4.48-10-10-10zm-1 15.6-3.5-3.5 1.4-1.4 2.1 2.1 5.6-5.6 1.4 1.4-7 7z"/>
+        </svg>
+        <span>AgriTech</span>
+      </a>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list" style="margin: 0; padding: 0;">
+          <li class="nav-item-dropdown">
+            <button class="nav-link dropdown-trigger " aria-haspopup="true" aria-expanded="false">
+              Home 
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="../index.html" class="">Tech & IoT Farming</a></li>
+              <li class="dropdown-item"><a href="../index1.html" class="">Organic & Eco Farming</a></li>
+            </ul>
+          </li>
+          <li><a href="about-us.html" class="nav-link active">About Us</a></li>
+          
+          <li class="nav-item-dropdown">
+            <button class="nav-link dropdown-trigger " aria-haspopup="true" aria-expanded="false">
+              Agriculture Guide
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="crop-guide.html" class="">Crop Database</a></li>
+              <li class="dropdown-item"><a href="iot-devices.html" class="">IoT Sensors & Probes</a></li>
+              <li class="dropdown-item"><a href="sustainability.html" class="">Eco Sustainability</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item-dropdown">
+            <button class="nav-link dropdown-trigger " aria-haspopup="true" aria-expanded="false">
+              Pages
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="coming-soon.html" class="">Coming Soon</a></li>
+              <li class="dropdown-item"><a href="404.html" class="">404 Error Page</a></li>
+              <li class="dropdown-item"><a href="privacy.html" class="">Privacy Policy</a></li>
+              <li class="dropdown-item"><a href="terms.html" class="">Terms & Conditions</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item-dropdown">
+            <button class="nav-link dropdown-trigger " aria-haspopup="true" aria-expanded="false">
+              Dashboards
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="user-dashboard.html" class="">User Dashboard</a></li>
+              <li class="dropdown-item"><a href="admin-dashboard.html" class="">Admin Dashboard</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- RTL Switch Pill -->
+        <button class="rtl-switch-pill" id="rtl-toggle" title="Switch text direction" aria-label="Toggle text direction">
+          <span class="rtl-switch-label ltr-label">LTR</span>
+          <span class="rtl-switch-handle"></span>
+          <span class="rtl-switch-label rtl-label">RTL</span>
+        </button>
+        <!-- Theme Switch Pill -->
+        <button class="theme-switch-pill" id="theme-toggle" title="Toggle Dark/Light mode" aria-label="Toggle Dark/Light mode">
+          <span class="theme-switch-icon sun-icon">
+            <svg viewBox="0 0 24 24" width="12" height="12"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          </span>
+          <span class="theme-switch-handle"></span>
+          <span class="theme-switch-icon moon-icon">
+            <svg viewBox="0 0 24 24" width="12" height="12"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </span>
+        </button>
+        <!-- Auth Links -->
+        <a href="signin.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Sign In</a>
+        <a href="signup.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Sign Up</a>
+      </div>
+    </div>
+  </header>
+<main>
+    
+    <!-- Hero Header -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container" style="text-align: center;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Who We Are</h1>
+        <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; font-size: 1.15rem;">Bridging the gap between ecological heritage and futuristic telemetry node automation.</p>
+      </div>
+    </section>
+
+    <!-- Company Story & Mission -->
+    <section class="section section-bg-alt">
+      <div class="container grid-2">
+        <div class="reveal-left" style="display: flex; flex-direction: column; justify-content: center;">
+          <h2 style="font-size: 2.25rem; margin-bottom: 1.5rem; color: var(--color-primary);">Our Farming Revolution</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">Founded in 2021, AgriTech was built upon a simple realization: standard agriculture was consuming water and pesticides unsustainably. By introducing localized smart sensor configurations, we proved farms could reduce resource waste while multiplying yields.</p>
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Today, we support thousands of agricultural units globally, enabling organic certified transitions alongside automated water valve controls and multispectral drone mapping.</p>
+        </div>
+        
+        <div class="reveal-right" style="display: flex; align-items: center; justify-content: center;">
+          <div class="glass-panel" style="border-inline-start: 5px solid var(--color-accent); padding: 2rem;">
+            <h3 style="margin-bottom: 1rem;">Core Values</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
+              <li>
+                <strong>Sustainability First</strong>
+                <p style="font-size: 0.9rem; color: var(--text-secondary)">Every telemetry module must reduce ecological strain.</p>
+              </li>
+              <li>
+                <strong>Data-Driven Growth</strong>
+                <p style="font-size: 0.9rem; color: var(--text-secondary)">We model real conditions instead of working on generic assumptions.</p>
+              </li>
+              <li>
+                <strong>Trust & Openness</strong>
+                <p style="font-size: 0.9rem; color: var(--text-secondary)">No hidden algorithms. Farm statistics are owned entirely by the farmer.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D Flip Card Team Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>The Founders & Engineers</h2>
+          <p>Meet the multidisciplinary minds behind our agricultural tech nodes and organic systems.</p>
+        </div>
+        
+        <div class="grid-3">
+          <!-- Team Member 1 -->
+          <div class="flip-card reveal" style="transition-delay: 0.1s;">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" style="margin-bottom: 1.5rem;">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+                <h3>Dr. Helena Vance</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">Chief Agriculturalist</p>
+              </div>
+              <div class="flip-card-back">
+                <h3>Helena Vance</h3>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem; margin-bottom: 1.5rem;">Helena specializes in micro-bacterial soil health and ecological permaculture design templates.</p>
+                <div style="font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem; width: 100%;">
+                  <strong>Education:</strong> PhD in Agronomy (Stanford)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="flip-card reveal" style="transition-delay: 0.2s;">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" style="margin-bottom: 1.5rem;">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+                <h3>Marcus Aurel</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">IoT Firmware Director</p>
+              </div>
+              <div class="flip-card-back">
+                <h3>Marcus Aurel</h3>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem; margin-bottom: 1.5rem;">Marcus supervises our hardware division, designing secure low-energy mesh network grids.</p>
+                <div style="font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem; width: 100%;">
+                  <strong>Expertise:</strong> 12+ Years Embedded Systems
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="flip-card reveal" style="transition-delay: 0.3s;">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" style="margin-bottom: 1.5rem;">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+                <h3>Kiran Shah</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">AI Systems Architect</p>
+              </div>
+              <div class="flip-card-back">
+                <h3>Kiran Shah</h3>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem; margin-bottom: 1.5rem;">Kiran manages our cloud analytics platform, constructing predictive yield forecasting algorithms.</p>
+                <div style="font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem; width: 100%;">
+                  <strong>Focus:</strong> Machine Learning Models
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Autonomous Drone R&D -->
+    <section class="section section-bg-alt">
+      <div class="container grid-2">
+        <div class="reveal-left">
+          <!-- 3D Card with generated drone scanner image -->
+          <div class="card-3d" style="width: 100%; max-width: 480px; transform-style: preserve-3d; border-radius: var(--border-radius-lg); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-lg); background-color: var(--bg-card); padding: 0.5rem;">
+            <img src="../assets/images/drone_sensor.png" alt="High-Tech Mapping Drone" style="width: 100%; border-radius: calc(var(--border-radius-lg) - 8px); display: block; transform: translateZ(20px);">
+          </div>
+        </div>
+        <div class="reveal-right" style="display: flex; flex-direction: column; justify-content: center;">
+          <h2 style="font-size: 2.25rem; margin-bottom: 1.5rem; color: var(--color-primary);">Autonomous Drone R&D</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">Our aerial research division develops multi-rotor scanning nodes equipped with multispectral NDVI (Normalized Difference Vegetation Index) cameras. These systems inspect leaf reflectance patterns to diagnose root stress long before physical symptoms appear in the field.</p>
+          <p style="color: var(--text-secondary);">By syncing flight grids directly with subsoil sensor nodes, water valve outputs dynamically calibrate themselves based on thermal evaporation indexes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Sustainability Milestones Timeline -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Our Milestones</h2>
+          <p>A chronological timeline of sustainable breakthroughs and hardware node grid expansions.</p>
+        </div>
+        
+        <div class="reveal" style="display: flex; flex-direction: column; gap: 2rem; max-width: 800px; margin: 0 auto; position: relative;">
+          <!-- Center timeline line -->
+          <div style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background-color: var(--border-color); transform: translateX(-50%);"></div>
+          
+          <!-- Timeline point 1 -->
+          <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; position: relative;">
+            <div class="glass-panel" style="width: 45%; padding: 1.5rem;">
+              <strong style="color: var(--color-primary); font-size: 1.2rem;">2021</strong>
+              <h4 style="margin-top: 0.25rem;">AgriTech Founded</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Initial telemetry research launches in Austin, TX testing wireless mesh protocols in dry zones.</p>
+            </div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--color-primary); border: 4px solid var(--bg-primary); position: absolute; left: 50%; transform: translateX(-50%); z-index: 2;"></div>
+            <div style="width: 45%;"></div>
+          </div>
+
+          <!-- Timeline point 2 -->
+          <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; position: relative;">
+            <div style="width: 45%;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--color-primary); border: 4px solid var(--bg-primary); position: absolute; left: 50%; transform: translateX(-50%); z-index: 2;"></div>
+            <div class="glass-panel" style="width: 45%; padding: 1.5rem;">
+              <strong style="color: var(--color-primary); font-size: 1.2rem;">2023</strong>
+              <h4 style="margin-top: 0.25rem;">100k Acres Monitored</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Deployments expand to corn regions and vineyards, reducing irrigation load by 35% on average.</p>
+            </div>
+          </div>
+
+          <!-- Timeline point 3 -->
+          <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; position: relative;">
+            <div class="glass-panel" style="width: 45%; padding: 1.5rem;">
+              <strong style="color: var(--color-primary); font-size: 1.2rem;">2025</strong>
+              <h4 style="margin-top: 0.25rem;">AI Analytics Launch</h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Launch of the yield projection algorithms, mapping forecasts with an audited accuracy index of 98%.</p>
+            </div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--color-primary); border: 4px solid var(--bg-primary); position: absolute; left: 50%; transform: translateX(-50%); z-index: 2;"></div>
+            <div style="width: 45%;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Accreditations Grid -->
+    <section class="section section-bg-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Compliance & Accreditations</h2>
+          <p>AgriTech hardware systems and crop analytics comply with international farm safety frameworks.</p>
+        </div>
+        
+        <div class="grid-3 reveal">
+          <div class="glass-card" style="text-align: center; padding: 2rem;">
+            <strong style="font-size: 1.2rem; color: var(--color-primary); display: block; margin-bottom: 0.5rem;">TLS 1.3 Certified</strong>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">End-to-end data encryption across wireless node mesh pipelines protects coordinates logs.</p>
+          </div>
+          <div class="glass-card" style="text-align: center; padding: 2rem;">
+            <strong style="font-size: 1.2rem; color: var(--color-primary); display: block; margin-bottom: 0.5rem;">USDA Organic Approved</strong>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">Natural pest and soil replenishment recipes qualify farms for certified organic labeling.</p>
+          </div>
+          <div class="glass-card" style="text-align: center; padding: 2rem;">
+            <strong style="font-size: 1.2rem; color: var(--color-primary); display: block; margin-bottom: 0.5rem;">GlobalG.A.P. Compliant</strong>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">Hardware valve automated thresholds prevent local water overconsumption according to GAP standards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-about">
+          <a href="../index.html" class="logo">
+            <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 2.21.72 4.25 1.94 5.92L12 22l8.06-4.08C21.28 16.25 22 14.21 22 12c0-5.52-4.48-10-10-10zm-1 15.6-3.5-3.5 1.4-1.4 2.1 2.1 5.6-5.6 1.4 1.4-7 7z"/>
+            </svg>
+            <span>AgriTech</span>
+          </a>
+          <p>Innovating agricultural yields and sustainability through robust 3D modeling, advanced wireless IoT node systems, and ecological harmony.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="coming-soon.html">Launch Updates</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Necessary Pages</h4>
+          <ul class="footer-links">
+            <li><a href="user-dashboard.html">User Dashboard</a></li>
+            <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+            <li><a href="404.html">404 Error Page</a></li>
+            <li><a href="signin.html">Log In</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 AgriTech Inc. All rights reserved. Precision technology for sustainable harvests.</p>
+        <p>Security Certified TLS 1.3</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

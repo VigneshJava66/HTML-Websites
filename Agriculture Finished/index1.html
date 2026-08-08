@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriTech - Bio-Dynamic Organic Permaculture</title>
+  <meta name="description" content="Harvest in harmony with nature. Explore ecological crop rotation calendars, interactive soil horizons profile analysis, and zero-chemical strategies.">
+  <meta name="color-scheme" content="light dark">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- FOUC prevention inline script -->
+  <script>
+    {
+      const theme = localStorage.getItem('color-scheme') || 
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      const dir = localStorage.getItem('site-dir') || 'ltr';
+      document.documentElement.setAttribute('dir', dir);
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Background Animated Shapes -->
+  <div class="parallax-bg">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+  </div>
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" id="logo-link">
+        <svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12c0 2.21.72 4.25 1.94 5.92L12 22l8.06-4.08C21.28 16.25 22 14.21 22 12c0-5.52-4.48-10-10-10zm-1 15.6-3.5-3.5 1.4-1.4 2.1 2.1 5.6-5.6 1.4 1.4-7 7z"/>
+        </svg>
+        <span>AgriTech</span>
+      </a>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list" style="margin: 0; padding: 0;">
+          <li class="nav-item-dropdown">
+            <button class="nav-link dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
+              Home 
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="index.html" class="">Tech & IoT Farming</a></li>
+              <li class="dropdown-item"><a href="index1.html" class="active">Organic & Eco Farming</a></li>
+            </ul>
+          </li>
+          <li><a href="pages/about-us.html" class="nav-link ">About Us</a></li>
+          
+          <li class="nav-item-dropdown">
+            <button class="nav-link dropdown-trigger " aria-haspopup="true" aria-expanded="false">
+              Agriculture Guide
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="pages/crop-guide.html" class="">Crop Database</a></li>
+              <li class="dropdown-item"><a href="pages/iot-devices.html" class="">IoT Sensors & Probes</a></li>
+              <li class="dropdown-item"><a href="pages/sustainability.html" class="">Eco Sustainability</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item-dropdown">
+            <button class="nav-link dropdown-trigger " aria-haspopup="true" aria-expanded="false">
+              Pages
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="pages/coming-soon.html" class="">Coming Soon</a></li>
+              <li class="dropdown-item"><a href="pages/404.html" class="">404 Error Page</a></li>
+              <li class="dropdown-item"><a href="pages/privacy.html" class="">Privacy Policy</a></li>
+              <li class="dropdown-item"><a href="pages/terms.html" class="">Terms & Conditions</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item-dropdown">
+            <button class="nav-link dropdown-trigger " aria-haspopup="true" aria-expanded="false">
+              Dashboards
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="pages/user-dashboard.html" class="">User Dashboard</a></li>
+              <li class="dropdown-item"><a href="pages/admin-dashboard.html" class="">Admin Dashboard</a></li>
+            </ul>
+          </li>
+          <li><a href="pages/contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- RTL Switch Pill -->
+        <button class="rtl-switch-pill" id="rtl-toggle" title="Switch text direction" aria-label="Toggle text direction">
+          <span class="rtl-switch-label ltr-label">LTR</span>
+          <span class="rtl-switch-handle"></span>
+          <span class="rtl-switch-label rtl-label">RTL</span>
+        </button>
+        <!-- Theme Switch Pill -->
+        <button class="theme-switch-pill" id="theme-toggle" title="Toggle Dark/Light mode" aria-label="Toggle Dark/Light mode">
+          <span class="theme-switch-icon sun-icon">
+            <svg viewBox="0 0 24 24" width="12" height="12"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          </span>
+          <span class="theme-switch-handle"></span>
+          <span class="theme-switch-icon moon-icon">
+            <svg viewBox="0 0 24 24" width="12" height="12"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </span>
+        </button>
+        <!-- Auth Links -->
+        <a href="pages/signin.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Sign In</a>
+        <a href="pages/signup.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Section 1: Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal-left">
+          <h1>Cultivate the Future, <span>Naturally</span></h1>
+          <p>Protect bio-diversity, regenerate soil organic carbon, and raise clean harvests using advanced permaculture layouts and sustainable crop rotations.</p>
+          <div class="hero-buttons">
+            <a href="pages/about-us.html" class="btn btn-accent">Our Green Mission</a>
+            <a href="#soil-explorer" class="btn btn-secondary">Analyze Soil Health</a>
+          </div>
+        </div>
+        
+        <div class="hero-image-wrapper reveal-right">
+          <div class="card-3d" style="width: 100%; max-width: 480px; transform-style: preserve-3d; border-radius: var(--border-radius-lg); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-lg); background-color: var(--bg-card); padding: 0.5rem;">
+            <img src="assets/images/hero_organic_farming.png" alt="Organic Permaculture Farming" style="width: 100%; border-radius: calc(var(--border-radius-lg) - 8px); display: block; transform: translateZ(20px);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Ecological Principles Grid -->
+    <section class="section section-bg-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Bio-Dynamic Principles</h2>
+          <p>We work alongside natural ecosystems to restore soil structure and cultivate high-nutritional-value food supplies.</p>
+        </div>
+        
+        <div class="grid-3">
+          <div class="glass-panel card-3d reveal" style="transition-delay: 0.1s;">
+            <div class="card-3d-inner">
+              <div class="feature-icon" style="background-color: rgba(245, 158, 11, 0.1); color: var(--color-accent)">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3v18M3 12h18"/>
+                </svg>
+              </div>
+              <h3>Permaculture Design</h3>
+              <p>Designing physical zones that mimic natural patterns, balancing water retention and wind breaks organically.</p>
+            </div>
+          </div>
+
+          <div class="glass-panel card-3d reveal" style="transition-delay: 0.2s;">
+            <div class="card-3d-inner">
+              <div class="feature-icon" style="background-color: rgba(245, 158, 11, 0.1); color: var(--color-accent)">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <h3>Soil Regeneration</h3>
+              <p>Cover crops and natural green manure restore humus levels and fix gaseous nitrogen back into soil aggregates.</p>
+            </div>
+          </div>
+
+          <div class="glass-panel card-3d reveal" style="transition-delay: 0.3s;">
+            <div class="card-3d-inner">
+              <div class="feature-icon" style="background-color: rgba(245, 158, 11, 0.1); color: var(--color-accent)">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+                </svg>
+              </div>
+              <h3>Zero-Chemical Policy</h3>
+              <p>Deploying biological pest controls and crop rotation strategies instead of synthetic herbicides or mineral salts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Soil Horizons Explorer (Interactive) -->
+    <section class="section" id="soil-explorer">
+      <div class="container grid-2">
+        <div class="reveal-left">
+          <div class="section-header" style="text-align: start; margin-bottom: 2rem;">
+            <h2>Soil Stratum Analysis</h2>
+            <p>Select any soil layer on the right to examine its physical structure, pH level, and bio-retention details.</p>
+            <img src="assets/images/soil_strata.png" alt="Soil Strata Horizons Infographic" style="width: 100%; max-width: 350px; border-radius: var(--border-radius-md); border: 1px solid var(--border-color); margin-top: 1.5rem; display: block; box-shadow: var(--shadow-sm);">
+          </div>
+          
+          <div class="glass-panel" id="soil-details-content" style="min-height: 200px; display: block; border-inline-start: 5px solid var(--color-primary)">
+            <h4 style="margin-bottom:0.75rem; color:var(--color-primary)">Topsoil & Humus (O-Horizon)</h4>
+            <p style="margin-bottom:0.75rem; font-size:0.95rem; color:var(--text-secondary)">Highly organic, loose material containing decomposed leaves, organic waste, and critical living microorganisms. Packed with rich nutrients that feed agriculture plants.</p>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; font-size:0.85rem; padding-top:0.5rem; border-top:1px solid var(--border-color)">
+              <div><strong>Depth Span:</strong> 0 - 10 inches</div>
+              <div><strong>pH Value:</strong> 6.2 - 6.8 (Optimal for crops)</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="reveal-right" style="display: flex; flex-direction: column; justify-content: center;">
+          <div class="soil-container">
+            <div class="soil-layer layer-1 active" data-layer="layer-1">
+              <h4>O-Horizon (Humus)</h4>
+              <span>0" - 10"</span>
+            </div>
+            <div class="soil-layer layer-2" data-layer="layer-2">
+              <h4>A & B-Horizon (Subsoil)</h4>
+              <span>10" - 30"</span>
+            </div>
+            <div class="soil-layer layer-3" data-layer="layer-3">
+              <h4>C-Horizon (Substratum)</h4>
+              <span>30" - 72"</span>
+            </div>
+            <div class="soil-layer layer-4" data-layer="layer-4">
+              <h4>R-Horizon (Bedrock)</h4>
+              <span>72"+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Organic Rotation Cycle Schedule -->
+    <section class="section section-bg-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Bio-Diverse Crop Rotations</h2>
+          <p>Explore our organic crop rotation schedules designed to naturally break disease vectors and restore soil nutrients.</p>
+        </div>
+        
+        <div class="grid-4">
+          <div class="glass-panel reveal" style="padding: 1.5rem;">
+            <strong style="color: var(--color-accent); font-size: 1.25rem;">Cycle 1: Nitrogen Fixation</strong>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 1rem;">Clover, Alfalfa, and Legumes bind atmospheric nitrogen and release it into the subsoil through root nodules.</p>
+            <span class="status-badge status-active">Months 1-4</span>
+          </div>
+          <div class="glass-panel reveal" style="padding: 1.5rem; transition-delay: 0.1s;">
+            <strong style="color: var(--color-accent); font-size: 1.25rem;">Cycle 2: Biomass Accumulation</strong>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 1rem;">Sorghum, Mustard, and Rye accumulate dense root mass, increasing soil organic carbon when mulched.</p>
+            <span class="status-badge status-active">Months 5-8</span>
+          </div>
+          <div class="glass-panel reveal" style="padding: 1.5rem; transition-delay: 0.2s;">
+            <strong style="color: var(--color-accent); font-size: 1.25rem;">Cycle 3: Crop Yield Phase</strong>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 1rem;">High-demand grains (Spelt, Wheat) or vegetables take advantage of the rich, naturally fertilized soil matrix.</p>
+            <span class="status-badge status-active">Months 9-12</span>
+          </div>
+          <div class="glass-panel reveal" style="padding: 1.5rem; transition-delay: 0.3s;">
+            <strong style="color: var(--color-accent); font-size: 1.25rem;">Cycle 4: Regenerative Cover</strong>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 1rem;">Tillage radishes drill deep holes to aerate compacted soils while preparing ground for the next cycle.</p>
+            <span class="status-badge status-active">Winter Cover</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Eco Farming Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Permaculture Community Voices</h2>
+          <p>Bio-dynamic farmers sharing their results using closed-loop organic methods.</p>
+        </div>
+        <div class="grid-3">
+          <div class="glass-panel reveal" style="padding: 2rem;">
+            <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1.5rem;">"By switching to zero-chemical pest controls, our ecosystem self-regulated within 18 months. Natural predatory insects now manage aphids perfectly."</p>
+            <strong>Evelyn Thorne</strong>
+            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Director, Oasis Permaculture</span>
+          </div>
+          <div class="glass-panel reveal" style="padding: 2rem; transition-delay: 0.1s;">
+            <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1.5rem;">"The interactive soil stratum guidelines taught our team exactly how to manage humus thickness. Our organic carbon score increased by 2.1 points."</p>
+            <strong>Liam Fitzgerald</strong>
+            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Head Farmer, Clover Hill Farm</span>
+          </div>
+          <div class="glass-panel reveal" style="padding: 2rem; transition-delay: 0.2s;">
+            <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1.5rem;">"Closed-loop bio-dynamic schedules allowed us to receive full USDA Organic and GlobalG.A.P. accreditation, boosting crop margins by 45%."</p>
+            <strong>Dr. Akira Sato</strong>
+            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Principal Researcher, Sato Ecological Systems</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Green Certification and Audit Newsletter Sign-up -->
+    <section class="section section-bg-alt">
+      <div class="container" style="max-width: 650px; text-align: center;">
+        <div class="reveal">
+          <h2 style="font-size: 2.25rem; margin-bottom: 1rem; color: var(--color-accent-hover);">Request Organic Farm Audits</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Subscribe to get monthly newsletters regarding USDA Organic standards updates, composting recipes, and biological pest alert bulletins.</p>
+          <form class="glass-panel" style="display: flex; padding: 0.5rem; gap: 0.5rem; border-radius: 50px; align-items: center;" onsubmit="event.preventDefault(); alert('Subscribed to Permaculture Bulletins!');">
+            <input type="email" placeholder="Enter email address" required style="background: none; border: none; outline: none; padding-left: 1.5rem; flex: 1; color: var(--text-primary);">
+            <button type="submit" class="btn btn-accent" style="border-radius: 50px; padding: 0.6rem 1.5rem; font-size: 0.9rem;">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-about">
+          <a href="index.html" class="logo">
+            <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 2.21.72 4.25 1.94 5.92L12 22l8.06-4.08C21.28 16.25 22 14.21 22 12c0-5.52-4.48-10-10-10zm-1 15.6-3.5-3.5 1.4-1.4 2.1 2.1 5.6-5.6 1.4 1.4-7 7z"/>
+            </svg>
+            <span>AgriTech</span>
+          </a>
+          <p>Innovating agricultural yields and sustainability through robust 3D modeling, advanced wireless IoT node systems, and ecological harmony.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/about-us.html">About Us</a></li>
+            <li><a href="pages/contact.html">Contact Us</a></li>
+            <li><a href="pages/coming-soon.html">Launch Updates</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Necessary Pages</h4>
+          <ul class="footer-links">
+            <li><a href="pages/user-dashboard.html">User Dashboard</a></li>
+            <li><a href="pages/admin-dashboard.html">Admin Dashboard</a></li>
+            <li><a href="pages/404.html">404 Error Page</a></li>
+            <li><a href="pages/signin.html">Log In</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="pages/privacy.html">Privacy Policy</a></li>
+            <li><a href="pages/terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 AgriTech Inc. All rights reserved. Precision technology for sustainable harvests.</p>
+        <p>Security Certified TLS 1.3</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
